@@ -1,0 +1,8 @@
+{
+  "name": "fcm-gplus-test",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
