@@ -4,7 +4,6 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {EmailValidator} from '../../validators/email';
 import {AuthProvider} from '../../providers/auth/auth';
 import {AlertFactory} from "../../utils/AlertFactory";
-import {HomePage} from "../home/home";
 
 @IonicPage({
   name: 'login'
@@ -38,7 +37,7 @@ export class LoginPage {
       this.authProvider.loginUser(this.loginForm.value.email, this.loginForm.value.password)
         .then( auth => {
           this.loading.dismiss().then( () => {
-            this.navCtrl.setRoot('HomePage');
+            this.navCtrl.setRoot('NotificacionesPage');
           });
         })
         .catch( error => {
@@ -58,7 +57,7 @@ export class LoginPage {
       .then(data => {
         console.log(data);
         this.loading.dismiss().then( () => {
-          this.navCtrl.setRoot('HomePage');
+          this.navCtrl.setRoot('NotificacionesPage');
         });
       }).catch( error => {
       this.loading.dismiss().then( () => {

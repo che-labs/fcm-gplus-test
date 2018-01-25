@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
 import {AngularFireModule} from "angularfire2";
 import {AngularFireAuthModule} from "angularfire2/auth";
@@ -14,6 +13,9 @@ import {GooglePlus} from "@ionic-native/google-plus";
 import {AlertFactory} from "../utils/AlertFactory";
 import {Toastfactory} from "../utils/toastfactory";
 import {ErrorMessages} from "../providers/error/error-messages";
+import {UserProvider} from "../providers/user/user";
+import {FCM} from "@ionic-native/fcm";
+import {FcmProvider} from "../providers/fcm/fcm";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBu2IMwtshQwjZSapkaKSR9uHdWFMlkqEM",
@@ -57,7 +59,10 @@ var config = {
     GooglePlus,
     AlertFactory,
     Toastfactory,
-    ErrorMessages
+    ErrorMessages,
+    UserProvider,
+    FCM,
+    FcmProvider
   ]
 })
 export class AppModule {}
